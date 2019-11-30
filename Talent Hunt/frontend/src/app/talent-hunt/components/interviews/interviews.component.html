@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div class="row">
+            <div class="col mt-3">
+                <p class="ml-4">Create Interview</p>
+            </div>
+        <div class="mt-3 offset-6">
+            <button type="button" class="btn btn-outline-primary btn-sm">Save</button>
+        </div>
+        <div class="col mt-3">
+            <button type="button" class="btn btn-light btn-sm">Cancel</button>
+        </div>
+    </div>
+        <hr>
+    <div class="ml-5 col-md-10 mt-3">
+        <p>Inetrview Information</p>
+        <form action="">
+                <div>
+                    <hr>
+                       <form action="" #form="ngForm" (ngSubmit)="addInterview(form)">
+                            <div class="row mt-2">
+                                <div class="col-md-6">
+                                    <mat-form-field class="col-md-12">
+                                        <input type="text" matInput placeholder="Interview Name" #interviewname="ngModel" name="interviewname"
+                                            ngModel>
+                                    </mat-form-field>
+                                </div>
+                                <div class="col-md-6">
+                                    <mat-form-field class="col-md-12">
+                                        <input type="text" matInput placeholder="Candidate Name" #cname="ngModel" name="cname"
+                                          ngModel> 
+                                    </mat-form-field>
+                                </div>
+                            </div>
+                            <div class="row mt-2">
+                                <div class="col-md-6">
+                                    <mat-form-field class="col-md-12">
+                                        <input type="text" matInput placeholder="Client Name" #clientName="ngModel"
+                                            name="clientName" ngModel>
+                                    </mat-form-field>
+                                </div>
+                                <div class="col-md-6">
+                                    <mat-form-field class="col-md-12">
+                                        <input type="text" matInput placeholder="Posting Title" #positionTitle="ngModel" name="positionTitle"
+                                            ngModel>
+                                    </mat-form-field>
+                                </div>
+                            </div>
+
+                            <div class="row mt-2">
+                                    <div class="col-md-6">
+                                        <mat-form-field class="col-md-12">
+                                            <input matInput [matDatepicker]="picker" placeholder="Choose a Opening date" #openingDate="ngModel"
+                                                ngModel name="openingDate">
+                                            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                                            <mat-datepicker #picker></mat-datepicker>
+                                        </mat-form-field>
+                                    </div>
+                                    <div class="col-md-6">
+                                            <mat-form-field class="col-md-12">
+                                                <input matInput [matDatepicker]="picker1" placeholder="Choose a closing date" #closingDate="ngModel"
+                                                    ngModel name="closingDate">
+                                                <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+                                                <mat-datepicker #picker1></mat-datepicker>
+                                            </mat-form-field>
+                                        </div>
+                            </div>
+                            <div class="row mt-2">
+                                <div class="col-md-6">
+                                    <mat-form-field class="col-md-12">
+                                        <input type="text" matInput placeholder="Interviewer(s)" #interviewer="ngModel" name="interviewer"
+                                            ngModel>
+                                    </mat-form-field>
+                                </div>
+                                <div class="col-md-6">
+                                    <mat-form-field class="col-md-12">
+                                        <input type="text" matInput placeholder="Interview Owner" #interviewerOwner="ngModel"
+                                            name="designation" ngModel>
+                                    </mat-form-field>
+                                </div>
+                            </div>
+                            
+                            <div class="row mt-2">
+                                <div class="col-md-6">
+                                    <mat-form-field class="col-md-12">
+                                        <input type="text" matInput placeholder="Location" #location="ngModel" name="location" ngModel>
+                                    </mat-form-field>
+                                </div>
+                                <div class="col-md-6">
+                                    <mat-form-field class="col-md-12">
+                                        <!-- <input type="text" > -->
+                                        <textarea matInput placeholder="Description About Interview" #description="ngModel" name="description" ngModel></textarea>
+                                    </mat-form-field>
+                                </div>
+                            </div>                           
+                             <button type="submit" class="col-md-6 offset-3 btn btn-outline-success btn-lg mt-2">CONDUCT iNTERVIEW</button> 
+                        </form>
+                    </div>
+        </form>
+    </div>
+</body>
+</html>

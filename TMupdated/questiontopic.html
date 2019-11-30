@@ -1,0 +1,166 @@
+<nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+    <a class="navbar-brand" href="./dashboardnew.html">Training Maintenance</a>
+    <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
+        aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+   
+</nav>
+<a href="./dashboard.html"  style="position: relative;top: 50px;right: 1350px;"><button class="btn btn-primary"> Back</button></a>
+
+<div class="container col-md-6 offset-3 float-left mt-5">
+        <table class="table">
+
+        <thead>
+        <tr>
+            <th>TOPICS</th>
+            <th>Number Of Questions</th>
+        </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td scope="row"><a href="">Basics</a></td>
+                <td>
+                    <a href="./questionlist.html">100</a>
+                </td>
+            </tr>
+            <tr>
+                <td scope="row"><a href="">Arrays</a></td>
+                <td>
+                    <a href="">30</a>
+                </td>
+            </tr>
+            <tr>
+                <td scope="row"><a href="">Strings</a></td>
+                <td>
+                    <a href="">20</a>
+                </td>
+            </tr>
+            <tr>
+                <td scope="row"><a href="">Methods</a></td>
+                <td>
+                    <a href="">30</a>
+                </td>
+            </tr>            
+            <tr>
+                <td scope="row"><a href="">Inheritance</a></td>
+                <td>
+                    <a href="">40</a>
+                </td>
+            </tr>
+            <tr>
+                    <td scope="row"><a href="">Polymorphism</a></td>
+                    <td>
+                        <a href="">20</a>
+                    </td>
+                </tr>
+            <tr>
+                <td scope="row"><a href="">Abstraction and Interface</a></td>
+                <td>
+                    <a href="">50</a>
+                </td>
+            </tr>
+            <tr>
+                <td scope="row"><a href="">Collection</a></td>
+                <td>
+                    <a href="">60</a>
+                </td>
+            </tr>
+            <tr>
+                <td scope="row"><a href="">Exception Handling</a></td>
+                <td>
+                    <a href="">40</a>
+                </td>
+            </tr>
+        </tbody>
+</table>
+</div>
+    <div class="mt-5 float-left" style="margin-left: 150px;">
+        <!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+        Add Questions
+      </button>
+      
+      <!-- Modal -->
+      <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Add Questions Here</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <div>
+                  <form action="" method="post" #add="ngForm">
+                        <div class="form-group">
+                                <div class="input-group">
+                                    <input type="text"  class="form-control" name4="level" #level="ngModel" ngModel placeholder="Select Topic" aria-label="Text input with dropdown button">
+                                    <div class="input-group-append">
+                                        <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
+                                        <div class="dropdown-menu">
+                                        <a class="dropdown-item" href="#">Basics</a>
+                                        <a class="dropdown-item" href="#">Arrays</a>
+                                        <a class="dropdown-item" href="#">Strings</a>
+                                        <a class="dropdown-item" href="#">Methods</a>
+                                        <a class="dropdown-item" href="#">Inherirtance</a>
+                                        <a class="dropdown-item" href="#">Polymorphism</a>
+                                        <a class="dropdown-item" href="#">Abstraction and Interface</a>
+                                        <a class="dropdown-item" href="#">Collection</a>
+                                        <a class="dropdown-item" href="#">Exception Handling</a>
+                                        </div>
+                                    </div>
+                                </div>
+                        </div>
+                        <div class="form-group">
+                                <input type="text" name="question" #question="ngModel" ngModel placeholder="Enter Question" class="form-control">
+                            </div>
+                        <div class="form-group">
+                            <input type="text" name="Option1" #option1="ngModel" ngModel placeholder="Enter option1" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="Option2" #Option2="ngModel" ngModel placeholder="Enter option2" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="Option3" #Option3="ngModel" ngModel placeholder="Enter option3" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="Option4" #Option4="ngModel" ngModel placeholder="Enter option4" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="answer" #answer="ngModel" ngModel placeholder="Enter answer" class="form-control">
+                        </div>
+                        <div class="form-gruop">
+                            <div class="input-group">
+                                <input type="text"  class="form-control" name4="level" #level="ngModel" ngModel placeholder="Select Difficulty Level" aria-label="Text input with dropdown button">
+                                <div class="input-group-append">
+                                  <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
+                                  <div class="dropdown-menu">
+                                    <a class="dropdown-item" href="#">Easy</a>
+                                    <a class="dropdown-item" href="#">Medium</a>
+                                    <a class="dropdown-item" href="#">Difficult</a>
+                                    
+                                  </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                  </form>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-success">Add</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+        <button type="submit" class="btn btn-warning">Upload Excel file</button>
+    </div>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>

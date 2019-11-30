@@ -1,0 +1,10 @@
+<%- include('./layout/nav.ejs') %>
+<% if(Message.length > 0) { %>
+    <% for (let msg of Message) { %>
+        <h1 class="text text-center col-md-6 offset-3 mt-5 card card-body text-white bg-success">
+            <%= msg.msg %>
+        </h1>
+        <% } %>
+        <% } else { %>
+            <h1>No msg</h1>
+            <% } %>
